@@ -1,0 +1,4 @@
+@mixin colorGroup ($text,$background){
+    color:$text;
+    background-color: $background;
+}

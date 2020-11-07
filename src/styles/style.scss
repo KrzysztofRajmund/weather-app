@@ -1,0 +1,107 @@
+@import './variables';
+@import './functions';
+
+body{
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    @include colorGroup($textBright,$backgroundBright);
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    background-image: url('../assets/background.jpeg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height:100vh;
+}
+
+
+//card
+.daily-card.card{
+    border:none;
+    background-color: rgba(0,0,0,0.3);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    margin-top: 50px;
+}
+
+.daily-card .card-title{
+    font-size: 45px;
+}
+
+.daily-card .card-subtitle{
+    font-size: 15px;
+    font-style: italic;
+    color:$textColor;
+}
+
+.daily-card img{
+    width:150px;
+    padding-bottom:25px;
+}
+
+
+
+//weekly component
+.weekly-container{
+    display:flex;
+ 
+}
+
+.weekly-container img{
+    width:50px;
+    padding-bottom:10px;
+
+}
+
+.weekly-container .daily-card{
+    margin: 70px 10px 10px 10px;
+}
+
+.weekly-container .daily-card .card-title{
+    font-size: 20px;
+}
+
+//form
+
+form{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+form .btn{
+    background-color: $backgroundColor;
+    color:$textDark;
+    height:40px;
+    margin-left:20px;
+    border:none;
+}
+
+form .btn:hover{
+    background-color: #ffab3cfa;
+    color:$textDark;
+}
+
+
+form .form-control{
+    height:40px;
+    color:$textBright;
+    background-color: rgba(24, 24, 24, 0.075);
+    border:0;
+    border-bottom:2px solid rgb(204, 204, 204);
+    border-radius: 0;
+
+}
+
+form .form-control::placeholder{
+    color:$textBright;
+    font-style: italic;
+}
+
+
+form .form-control:focus{
+    background-color: rgba(24, 24, 24, 0.075);   
+}
+

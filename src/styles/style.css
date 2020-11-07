@@ -1,0 +1,120 @@
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+  color: #f5f5f5fb !important;
+  background-color: #FAFAFA;
+  margin: 0px;
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url("../assets/background.jpeg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.daily-card.card {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  margin-top: 50px;
+}
+
+.daily-card .card-title {
+  font-size: 45px;
+}
+
+.daily-card .card-subtitle {
+  font-size: 15px;
+  font-style: italic;
+  color: #e78300da !important;
+}
+
+.daily-card img {
+  width: 150px;
+  padding-bottom: 25px;
+}
+
+.weekly-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.weekly-container img {
+  width: 50px;
+  padding-bottom: 10px;
+}
+
+.weekly-container .daily-card {
+  margin: 70px 10px 10px 10px;
+}
+
+.weekly-container .daily-card .card-title {
+  font-size: 20px;
+}
+
+form {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+form .btn {
+  background-color: #e78200;
+  color: #2b2b2b;
+  height: 40px;
+  margin-left: 20px;
+  border: none;
+}
+
+form .btn:hover {
+  background-color: #ffab3cfa;
+  color: #2b2b2b;
+}
+
+form .form-control {
+  height: 40px;
+  color: #f5f5f5fb !important;
+  background-color: rgba(24, 24, 24, 0.075);
+  border: 0;
+  border-bottom: 2px solid #cccccc;
+  border-radius: 0;
+}
+
+form .form-control::-webkit-input-placeholder {
+  color: #f5f5f5fb !important;
+  font-style: italic;
+}
+
+form .form-control:-ms-input-placeholder {
+  color: #f5f5f5fb !important;
+  font-style: italic;
+}
+
+form .form-control::-ms-input-placeholder {
+  color: #f5f5f5fb !important;
+  font-style: italic;
+}
+
+form .form-control::placeholder {
+  color: #f5f5f5fb !important;
+  font-style: italic;
+}
+
+form .form-control:focus {
+  background-color: rgba(24, 24, 24, 0.075);
+}
+/*# sourceMappingURL=style.css.map */

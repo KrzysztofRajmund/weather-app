@@ -1,11 +1,9 @@
 import {GET_DAY,GET_WEEK} from "./types";
-
-
-console.log(process.env,"env")
+const API_KEY = "af0a54b6bab5ad4a22f1f2b44a2b8491";
 
 export const getDay = (city) => async (dispatch) => {
     try {
-      const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_API_KEY}` ,
+      const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}` ,
 
       );
   
@@ -29,7 +27,7 @@ export const getDay = (city) => async (dispatch) => {
 
   export const getWeek = (city) => async (dispatch) => {
     try {
-      const res = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${process.env.REACT_APP_API_KEY}` ,
+      const res = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}` ,
 
       );
   

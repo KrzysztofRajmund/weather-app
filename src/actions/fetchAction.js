@@ -1,5 +1,4 @@
 import {GET_DAY,GET_WEEK} from "./types";
-// const API_KEY = "af0a54b6bab5ad4a22f1f2b44a2b8491";
 
 
 console.log(process.env,"env")

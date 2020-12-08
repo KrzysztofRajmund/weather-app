@@ -14,6 +14,7 @@ body {
           justify-content: center;
   background-image: url("../assets/background.png");
   background-size: cover;
+  background-attachment: fixed;
   background-position: bottom;
   background-repeat: no-repeat;
   min-height: 100vh;
@@ -21,7 +22,23 @@ body {
 }
 
 .city-container, .daily-container {
-  max-width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.city-container .daily-card.card, .daily-container .daily-card.card {
+  min-width: 250px;
 }
 
 .daily-card.card {
@@ -48,12 +65,35 @@ body {
   padding-bottom: 25px;
 }
 
+.daily-card__subtitle {
+  text-transform: uppercase;
+}
+
+.weekly-component {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .weekly-component .btn {
-  width: 100%;
+  min-width: 250px;
   background-color: #e78200;
   color: #2b2b2b;
+  text-transform: uppercase;
+  font-weight: 700;
   height: 40px;
-  margin: 50px 0px;
+  margin: 10px 0px;
   border: none;
 }
 
@@ -61,6 +101,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 50px;
+  margin-top: 20px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -142,8 +184,6 @@ form .form-control:focus {
 @media (max-width: 700px) {
   .weekly-container .daily-card.card {
     min-width: 70px;
-  }
-  .weekly-container .daily-card {
     margin: 0px 10px 10px 10px;
   }
   .weekly-container img {
@@ -188,9 +228,21 @@ form .form-control:focus {
     grid-gap: 0.5rem;
   }
   form .btn {
-    width: auto;
-    margin-left: 10px;
-    margin-right: 10px;
+    max-width: 250px;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  form input::-webkit-input-placeholder {
+    text-align: center;
+  }
+  form input:-ms-input-placeholder {
+    text-align: center;
+  }
+  form input::-ms-input-placeholder {
+    text-align: center;
+  }
+  form input::placeholder {
+    text-align: center;
   }
 }
 /*# sourceMappingURL=style.css.map */

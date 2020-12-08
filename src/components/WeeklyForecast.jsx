@@ -28,10 +28,21 @@ const WeeklyForecast = ({getIcon, city, getWeek, weekWeather}) => {
         setFiveDays(weekWeather.list);
       }, [weekWeather]);
 
-      console.log(weekWeather, "week weather")
-
       const getForecast = () =>{ 
-            setLoading(true);
+           
+            if(loading === false){
+              setLoading(true);
+            } else {
+              setLoading(false);
+            }
+    }
+
+
+    const dateHandler = (d, index) =>{
+      let days = ["Sunday","Monday","Tuesday","Wendesday","Thursday", "Friday","Saturday"]
+      let dayOfWeek = days[d.getDay() + index + 1];
+
+      return dayOfWeek === undefined ? "Sun" : dayOfWeek.substr(0,3); 
     }
 
 
@@ -43,12 +54,13 @@ const WeeklyForecast = ({getIcon, city, getWeek, weekWeather}) => {
         5 days Forecast
       </Button>
               <Container className="weekly-container">
-    {loading ? fiveDays.filter( x => x.dt_txt.substr(-8,8) === "15:00:00" ).map(weather=>{
-
-        console.log(fiveDays, "5 days")
+    {loading ? fiveDays.filter( x => x.dt_txt.substr(-8,8) === "15:00:00" ).map((weather,index) =>{
         return(
-        <Card className="daily-card">
+        <Card key={index} className="daily-card">
         <Card.Body>
+        <Card.Subtitle className="mb-2 text-muted daily-card__subtitle">
+          {dateHandler(new Date(),index)}
+          </Card.Subtitle>
           <Card.Img
             variant="top"
             src={getIcon(weather.weather[0].main)}

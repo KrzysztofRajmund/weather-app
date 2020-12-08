@@ -11,6 +11,7 @@ body{
     justify-content: center;
     background-image: url('../assets/background.png');
     background-size: cover;
+    background-attachment: fixed;
     background-position: bottom;
     background-repeat: no-repeat;
     min-height:100vh;
@@ -19,7 +20,13 @@ body{
 
 
 .city-container,.daily-container{
-    max-width:300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .daily-card.card{
+        min-width:250px;
+    }
 }
 
 
@@ -47,25 +54,40 @@ body{
     padding-bottom:25px;
 }
 
-
-
-//weekly component
-
-.weekly-component .btn{
-      
-    width:100%;
-    background-color: $backgroundColor;
-    color:$textDark;
-    height:40px;
-    margin:50px 0px;
-    border:none;
-
+.daily-card__subtitle{
+    text-transform: uppercase;
 }
 
 
 
+//weekly component
+
+.weekly-component {
+    margin-top:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .btn{
+      
+        min-width:250px;
+        background-color: $backgroundColor;
+        color:$textDark;
+        text-transform:uppercase;
+        font-weight:700;
+        height:40px;
+        margin:10px 0px;
+        border:none;
+    
+    }
+    
+}
+
+
 .weekly-container{
     display:flex; 
+    margin-bottom:50px;
+    margin-top:20px;
     justify-content: center;
     .daily-card.card{
         min-width:100px;
@@ -136,13 +158,10 @@ form .form-control:focus{
     .weekly-container{
         .daily-card.card{
             min-width:70px;
+            margin: 0px 10px 10px 10px;
         }
     }
-    
-    .weekly-container .daily-card{
-        margin: 0px 10px 10px 10px;
-    }
-    
+        
     
     .weekly-container img{
         width:25px;
@@ -195,10 +214,17 @@ form .form-control:focus{
         grid-gap: 0.5rem;
     }
 
-    form .btn{
-        width:auto;
-        margin-left:10px;
-        margin-right:10px;
+    form {
+        .btn{
+            max-width:250px;
+            margin-left:60px;
+            margin-right:60px;
+    
+        }
+
+        input::placeholder{
+          text-align: center;
+        }
 
     }
 

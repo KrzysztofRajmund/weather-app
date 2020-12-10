@@ -38,11 +38,10 @@ const WeeklyForecast = ({getIcon, city, getWeek, weekWeather}) => {
     }
 
 
-    const dateHandler = (d, index) =>{
-      let days = ["Sunday","Monday","Tuesday","Wendesday","Thursday", "Friday","Saturday"]
-      let dayOfWeek = days[d.getDay() + index + 1];
-
-      return dayOfWeek === undefined ? "Sun" : dayOfWeek.substr(0,3); 
+    const dateHandler = (d) =>{
+      const days = ["Sunday","Monday","Tuesday","Wendesday","Thursday", "Friday","Saturday"];
+      const dayOfWeek = days[d.getDay()];
+      return dayOfWeek ; 
     }
 
 
@@ -55,11 +54,12 @@ const WeeklyForecast = ({getIcon, city, getWeek, weekWeather}) => {
       </Button>
               <Container className="weekly-container">
     {loading ? fiveDays.filter( x => x.dt_txt.substr(-8,8) === "15:00:00" ).map((weather,index) =>{
+      console.log(weather, "weather")
         return(
         <Card key={index} className="daily-card">
         <Card.Body>
         <Card.Subtitle className="mb-2 text-muted daily-card__subtitle">
-          {dateHandler(new Date(),index)}
+          {dateHandler(new Date(weather.dt * 1000))}
           </Card.Subtitle>
           <Card.Img
             variant="top"

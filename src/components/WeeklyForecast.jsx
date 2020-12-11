@@ -41,7 +41,7 @@ const WeeklyForecast = ({getIcon, city, getWeek, weekWeather}) => {
     const dateHandler = (d) =>{
       const days = ["Sunday","Monday","Tuesday","Wendesday","Thursday", "Friday","Saturday"];
       const dayOfWeek = days[d.getDay()];
-      return dayOfWeek ; 
+      return dayOfWeek.substr(0,3) ; 
     }
 
 
